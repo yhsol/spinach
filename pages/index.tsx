@@ -4,10 +4,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="bg-slate-400 p-20 grid gap-10">
+    <div className="bg-slate-400 p-20 grid gap-10 min-h-screen">
       <FirstPost />
       <SecondPost />
-      <div className="bg-white p-10 rounded-2xl shadow-xl"></div>
+      <ThirdPost />
       <div className="bg-white p-10 rounded-2xl shadow-xl"></div>
     </div>
   );
@@ -64,6 +64,47 @@ function SecondPost() {
               New York, USA
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ThirdPost() {
+  return (
+    <div className="bg-white p-10 rounded-2xl shadow-xl">
+      <div className="flex justify-between items-center mb-5">
+        <span>⬅️</span>
+        <div className="space-x-3">
+          <span>⭐ 1.0</span>
+          <span className="shadow-xl p-2 rounded-md">🧡</span>
+        </div>
+      </div>
+      <div className="bg-zinc-400 h-72 text-center mb-5">chair image</div>
+      <div className="flex flex-col">
+        <span className="font-medium text-lg">Swoon Lounge</span>
+        <div className="text-xs text-gray-500">Chair</div>
+        <div className="mt-3 mb-5 flex justify-between items-center">
+          <div>
+            <input type="radio" />
+            <input type="radio" />
+            <input type="radio" />
+          </div>
+          <div className="flex items-center space-x-3">
+            <button className="bg-blue-100 flex justify-center items-center aspect-square w-10 text-xl text-gray-500 rounded-md">
+              -
+            </button>
+            <span>1</span>
+            <button className="bg-blue-100 flex justify-center items-center aspect-square w-10 text-xl text-gray-500 rounded-md">
+              +
+            </button>
+          </div>
+        </div>
+        <div className="flex justify-between items-center">
+          <span className="font-semibold text-xl">$450</span>
+          <button className="bg-blue-500 text-white text-sm text-center px-8 py-2 rounded-md">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
