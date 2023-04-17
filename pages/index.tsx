@@ -17,14 +17,32 @@ function FirstPost() {
   return (
     <div className="bg-white p-6 rounded-3xl shadow-xl">
       <span className="font-semibold text-3xl">Select Item</span>
-      <div className="flex justify-between my-2">
-        <span className="text-gray-500">Grey Chair</span>
-        <span className="font-semibold">$10</span>
-      </div>
-      <div className="flex justify-between">
-        <span className="text-gray-500">Tooly Table</span>
-        <span className="font-semibold">$10</span>
-      </div>
+      <ul>
+        {[
+          { name: "Grey Chair", price: "$1" },
+          { name: "Tooly Table", price: "$2" },
+          { name: "Grey Chair", price: "$3" },
+          { name: "Tooly Table", price: "$4" },
+        ].map(({ name, price }) => (
+          <li
+            key={`${name}-${price}`}
+            className="flex justify-between my-2 first:bg-blue-50 last:bg-blue-50 only:bg-red-50
+            odd:text-red-500 even:text-blue-500
+            "
+          >
+            <span className="text-gray-500">{name}</span>
+            <span className="font-semibold">{price}</span>
+          </li>
+        ))}
+      </ul>
+
+      <ul>
+        {["a", "b", "c", ""].map((c, i) => (
+          <li key={i} className="bg-red-500 py-2 empty:hidden">
+            {c}
+          </li>
+        ))}
+      </ul>
       <div className="mt-2 pt-2 border-t-2 border-dashed flex justify-between">
         <span>Total</span>
         <span className="font-semibold">$10</span>
