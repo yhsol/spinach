@@ -8,6 +8,7 @@ export default function Home() {
       <FirstPost />
       <SecondPost />
       <ThirdPost />
+      <Form />
       <div className="bg-white p-10 rounded-2xl shadow-xl"></div>
     </div>
   );
@@ -62,7 +63,7 @@ function FirstPost() {
 
 function SecondPost() {
   return (
-    <div className="bg-blue-500 rounded-2xl shadow-xl overflow-hidden">
+    <div className="bg-blue-500 rounded-2xl shadow-xl overflow-hidden group">
       <div>
         <div className="p-10 pb-16">
           <div className="flex justify-between">
@@ -76,7 +77,7 @@ function SecondPost() {
               <div className="text-gray-500 mb-3">Orders</div>
               <div className="font-medium">340</div>
             </div>
-            <div className="h-24 w-24 bg-red-400 rounded-full"></div>
+            <div className="h-24 w-24 bg-gray-300 rounded-full group-hover:bg-red-300 transition-colors"></div>
             <div className="flex flex-col items-center">
               <div className="text-gray-500 mb-3">Spent</div>
               <div className="font-medium">$2,310</div>
@@ -132,5 +133,33 @@ function ThirdPost() {
         </div>
       </div>
     </div>
+  );
+}
+
+function Form() {
+  return (
+    <form
+      action=""
+      className="flex flex-col space-y-2 bg-blue-500 p-5 focus-within:bg-blue-100"
+    >
+      <input
+        type="text"
+        required
+        placeholder="Username"
+        className="required:border-2 border-yellow-500
+        invalid:bg-red-500 valid:border-none
+        disabled:opacity-0
+        "
+      />
+      <input
+        type="password"
+        required
+        placeholder="Password"
+        className="placeholder-shown:bg-teal-500 placeholder:text-red-500"
+      />
+      <button type="submit" value="Login" className="bg-white">
+        Login
+      </button>
+    </form>
   );
 }
