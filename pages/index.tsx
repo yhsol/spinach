@@ -138,25 +138,20 @@ function ThirdPost() {
 
 function Form() {
   return (
-    <form
-      action=""
-      className="flex flex-col space-y-2 bg-blue-500 p-5 focus-within:bg-blue-100"
-    >
+    <form action="" className="flex flex-col space-y-2 p-5 bg-yellow-500">
       <input
         type="text"
         required
         placeholder="Username"
-        className="required:border-2 border-yellow-500
-        invalid:bg-red-500 valid:border-none
-        disabled:opacity-0
+        className="peer border p-1 border-gray-400 rounded
         "
       />
-      <input
-        type="password"
-        required
-        placeholder="Password"
-        className="placeholder-shown:bg-teal-500 placeholder:text-red-500"
-      />
+      <span className="hidden peer-invalid:block peer-invalid:text-red-500">
+        This input is invalid
+      </span>
+      <span className="hidden peer-valid:block peer-valid:text-teal-500">
+        Awesome Username
+      </span>
       <button type="submit" value="Login" className="bg-white">
         Login
       </button>
