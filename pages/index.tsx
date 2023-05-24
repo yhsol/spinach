@@ -8,11 +8,11 @@ import {
 
 export default function Home() {
   return (
-    <div className="bg-slate-400 p-20 grid gap-10 min-h-screen">
+    <div className="bg-slate-400 p-20 min-h-screen grid gap-10 lg:grid-cols-2 xl:grid-cols-3 xl:place-content-center">
       <SelectItem />
       <Profile />
-      <ItemPost />
-      <Form />
+      {/* <ItemPost />
+      <Form /> */}
       <FirstLetter />
     </div>
   );

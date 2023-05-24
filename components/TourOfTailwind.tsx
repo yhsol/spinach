@@ -1,6 +1,6 @@
 export function SelectItem() {
   return (
-    <div className="bg-white p-6 rounded-3xl shadow-xl sm:bg-red-400 sm:hover:bg-blue-500 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-400">
+    <div className="flex flex-col justify-between bg-white p-6 rounded-3xl shadow-xl">
       <span className="font-semibold text-3xl">Select Item</span>
       <ul>
         {[
@@ -11,8 +11,7 @@ export function SelectItem() {
         ].map(({ name, price }) => (
           <li
             key={`${name}-${price}`}
-            className="flex justify-between my-2 first:bg-blue-50 last:bg-blue-50 only:bg-red-50
-              odd:text-red-500 even:text-blue-500
+            className="flex justify-between my-2
               "
           >
             <span className="text-gray-500">{name}</span>
@@ -23,7 +22,7 @@ export function SelectItem() {
 
       <ul>
         {["a", "b", "c", ""].map((c, i) => (
-          <li key={i} className="bg-red-500 py-2 empty:hidden">
+          <li key={i} className="py-2 empty:hidden">
             {c}
           </li>
         ))}
@@ -47,7 +46,7 @@ export function SelectItem() {
 
 export function Profile() {
   return (
-    <div className="bg-blue-500 rounded-2xl shadow-xl overflow-hidden group">
+    <div className="bg-blue-500 rounded-2xl shadow-xl overflow-hidden group landscape:bg-yellow-500 portrait:bg-teal-500">
       <div>
         <div className="p-10 pb-16">
           <div className="flex justify-between">
@@ -145,7 +144,7 @@ export function Form() {
 
 export function FirstLetter() {
   return (
-    <p className="first-letter:text-7xl first-letter:hover:text-yellow-500">
+    <p className="first-letter:text-7xl first-letter:hover:text-yellow-500 bg-blue-500 lg:col-span-2 xl:col-span-1">
       lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
     </p>
   );
