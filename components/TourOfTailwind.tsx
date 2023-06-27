@@ -1,6 +1,6 @@
 export function SelectItem() {
   return (
-    <div className="flex flex-col justify-between bg-white p-6 rounded-3xl shadow-xl">
+    <div className="dark:bg-black flex flex-col justify-between bg-white p-6 rounded-3xl shadow-xl">
       <span className="font-semibold text-3xl">Select Item</span>
       <ul>
         {[
@@ -46,7 +46,7 @@ export function SelectItem() {
 
 export function Profile() {
   return (
-    <div className="bg-blue-500 rounded-2xl shadow-xl overflow-hidden group landscape:bg-yellow-500 portrait:bg-teal-500">
+    <div className="dark:text-white bg-blue-500 rounded-2xl shadow-xl overflow-hidden group landscape:bg-yellow-500 portrait:bg-teal-500">
       <div>
         <div className="p-10 pb-16">
           <div className="flex justify-between">
@@ -144,7 +144,7 @@ export function Form() {
 
 export function FirstLetter() {
   return (
-    <p className="first-letter:text-7xl first-letter:hover:text-yellow-500 bg-blue-500 lg:col-span-2 xl:col-span-1">
+    <p className="dark:text-blue first-letter:text-7xl first-letter:hover:text-yellow-500 bg-blue-500 lg:col-span-2 xl:col-span-1">
       lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
     </p>
   );
