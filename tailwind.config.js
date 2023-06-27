@@ -16,5 +16,5 @@ module.exports = {
   },
   // darkMode 가 media 라면 시스템 설정에 따라 자동으로 변경됨. class 라면 dark 클래스가 추가되어야 변경됨.
   darkMode: "media",
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
